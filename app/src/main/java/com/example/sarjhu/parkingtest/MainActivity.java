@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(MainActivity.this,Login.class);
                 startActivity(i);
-                finish();
+                //finish();
 
             }
         });
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent j=new Intent(MainActivity.this,SignUp.class);
                 startActivity(j);
-                finish();
+              //  finish();
             }
         });
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k=new Intent(MainActivity.this,QRCode.class);
                 startActivity(k);
-                finish();
+               // finish();
             }
         });
 

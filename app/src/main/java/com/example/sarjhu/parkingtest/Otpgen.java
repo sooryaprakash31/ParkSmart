@@ -18,22 +18,25 @@ public class Otpgen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otpgen);
-        generateRandom = (Button)findViewById(R.id.generate);
-        randomResult = (TextView)findViewById(R.id.randomresult);
+        generateRandom = findViewById(R.id.generate);
+        randomResult = findViewById(R.id.randomresult);
+        //popup = findViewById(R.id.popup);
 
         generateRandom.setOnClickListener(new Button.OnClickListener(){
 
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                String result = "";
+                String result = " ";
                 myRandom = new Random();
+                int rand = myRandom.nextInt(10000);
+                while(String.valueOf(rand).length()<5)
+                {
+                    rand += rand;
+                }
+                result = String.valueOf(rand).substring(0,5);
+                randomResult.setText(String.valueOf(result));
 
-
-                    result += String.valueOf(myRandom.nextInt()) + "\n";
-               result=result.substring(0,4);
-
-                randomResult.setText(result);
             }});
 
     }
