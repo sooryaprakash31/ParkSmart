@@ -1,2 +1,3 @@
 # ParkSmart
-An app to automate the parking process in public areas
+This application is Written with java. 
+This Works on Android OS powered devices above Android 5.0 version
